@@ -1,54 +1,33 @@
-# React + TypeScript + Vite
+# Movie Management App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+En enkel filmhanteringsapplikation byggd med React, TypeScript och React Router. Användare och administratörer kan hantera filmer genom att visa detaljer, lägga till nya filmer, redigera befintliga och ta bort filmer.
 
-Currently, two official plugins are available:
+## Funktioner
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Inloggning**: Säker inloggning för användare och administratörer.
+- **Användarpanel**: Användare kan se en lista med filmer.
+- **Adminpanel**: Administratörer kan lägga till, redigera och ta bort filmer.
+- **Autentisering**: Skyddade sidor med JWT-baserad autentisering.
+- **Responsiv design**: Anpassar sig till olika skärmstorlekar.
 
-## Expanding the ESLint configuration
+## Teknologier
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React**
+- **TypeScript**
+- **React Router**
+- **Axios**
+- **CSS**
+  
+## Backend API
+Appen kommunicerar med en backend som körs på http://localhost:5001. 
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Användnign
+# Inloggning
+Admin: Användarnamn admin, lösenord admin.
+User: Användarnamn public, lösenord public.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+# Admin-funktioner
+Visa, lägg till, redigera och ta bort filmer.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+# Användarfunktion
+Visa filmer och deras detaljer.
